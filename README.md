@@ -1,1 +1,2 @@
 # example-goreleaser
+# example-goreleaser
