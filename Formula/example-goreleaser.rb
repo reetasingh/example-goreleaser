@@ -5,30 +5,30 @@
 class ExampleGoreleaser < Formula
   desc "Lightweight Kubernetes conformance tests runner"
   homepage "https://github.com/reetasingh/example-goreleaser"
-  version "1.2.0"
+  version "2.0.0"
 
   depends_on "go"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/reetasingh/example-goreleaser/archive/refs/tags/v1.2.0/example-goreleaser_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy,
+      url "https://github.com/reetasingh/example-goreleaser/archive/refs/tags/v2.0.0/example-goreleaser_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy,
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "44edb26f584f57220a8cdf85e4139be4c570df43e7c8f4eb7d10309c30778ff6"
+      sha256 "6203c2fdbd4076d9c0f3e6e882688c9cdbd2f5d467fbfb100723975d77392806"
 
       def install
         system "go", "build", *std_go_args(ldflags: "-s -w")
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/reetasingh/example-goreleaser/archive/refs/tags/v1.2.0/example-goreleaser_Darwin_arm64.tar.gz", using: CurlDownloadStrategy,
+      url "https://github.com/reetasingh/example-goreleaser/archive/refs/tags/v2.0.0/example-goreleaser_Darwin_arm64.tar.gz", using: CurlDownloadStrategy,
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "5b1ac8b7e3fca449c9c81f09214ae80229a858ef43ee435e6c1c8ee82979898a"
+      sha256 "e02e77127160e4a140002985d0873c1cd0f9e82a0ec6157fe863af81f2d84bc2"
 
       def install
         system "go", "build", *std_go_args(ldflags: "-s -w")
@@ -38,24 +38,24 @@ class ExampleGoreleaser < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/reetasingh/example-goreleaser/archive/refs/tags/v1.2.0/example-goreleaser_Linux_x86_64.tar.gz", using: CurlDownloadStrategy,
+      url "https://github.com/reetasingh/example-goreleaser/archive/refs/tags/v2.0.0/example-goreleaser_Linux_x86_64.tar.gz", using: CurlDownloadStrategy,
         headers: [
             "Accept: application/octet-stream",
             "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "89d742eed070538ebd7b13195e01a1b03c6cd7d6c0e0efc84937489b7cf4b069"
+      sha256 "e2e82f70393405a5f5673f14e060ec5a8078990bf2ad52461c55a244316683eb"
 
       def install
         system "go", "build", *std_go_args(ldflags: "-s -w")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/reetasingh/example-goreleaser/archive/refs/tags/v1.2.0/example-goreleaser_Linux_arm64.tar.gz", using: CurlDownloadStrategy,
+      url "https://github.com/reetasingh/example-goreleaser/archive/refs/tags/v2.0.0/example-goreleaser_Linux_arm64.tar.gz", using: CurlDownloadStrategy,
         headers: [
             "Accept: application/octet-stream",
             "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "1a609f6e97b4ab3e9d76b23f2fa64c26520c7fd8886e3bb036ea84a075048e5b"
+      sha256 "d9ec72708f0f5198bcfe1446212a460b6a370f3da97e2acdbaba1078668f0440"
 
       def install
         system "go", "build", *std_go_args(ldflags: "-s -w")
