@@ -67,7 +67,7 @@ brews:
     #
     # Default depends on the client.
     # Templates: allowed
-    url_template: "https://github.com/reetasingh/example-goreleaser/archive/refs/tags/{{ .Tag }}.{{ .ArtifactName }}"
+    url_template: "https://github.com/reetasingh/example-goreleaser/archive/refs/tags/{{ .Tag }}.tar.gz"
 
     # Headers to include in the `url` stanza.
     # This can be a more modern alternative to `download_strategy` in some
@@ -112,3 +112,7 @@ brews:
       owner: reetasingh
       name: example-goreleaser
       branch: main
+      pull_request:
+        # Whether to enable it or not.
+        enabled: true
+
