@@ -67,7 +67,7 @@ brews:
     #
     # Default depends on the client.
     # Templates: allowed
-    url_template: "https://github.com/reetasingh/example-goreleaser/releases/download/{{ .Tag }}/{{ .ArtifactName }}"
+    url_template: "https://github.com/reetasingh/example-goreleaser/archive/refs/tags/{{ .Tag }}.{{ .ArtifactName }}"
 
     # Headers to include in the `url` stanza.
     # This can be a more modern alternative to `download_strategy` in some
