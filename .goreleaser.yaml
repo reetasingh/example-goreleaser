@@ -112,7 +112,7 @@ brews:
       owner: reetasingh
       name: example-goreleaser
       branch: main
-      pull_request:
-        # Whether to enable it or not.
-        enabled: true
+      # pull_request:
+      #   # Whether to enable it or not.
+      #   enabled: true
 
